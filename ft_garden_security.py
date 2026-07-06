@@ -13,7 +13,6 @@ class Plant:
             self._age = 0
     def show(self):
         print(self.name, ":", self._height,'cm', self._age, "days old")
-    
     def get_height(self):
         return self._height
     def get_age(self):
@@ -32,16 +31,22 @@ class Plant:
         else:
             print(self.name,": Error, age can't be negative")
             print("Age update rejected")
-print("=== Garden Security System ===")
-rose = Plant("rose", -2, 30)
-#jasmin = Plant("jasmin", 25, 30)
-#flow = Plant("flow", 25, 30)
-print("Plant created:", end=" ")
-rose.show()
+     #new for next exercice!       
+    def grow(self):
+        self._height += 42
+    def age(self, days):
+        self._age += days
+if __name__ == "__main__":
+    print("=== Garden Security System ===")
+    rose = Plant("rose", -2, 30)
+    #jasmin = Plant("jasmin", 25, 30)
+    #flow = Plant("flow", 25, 30)
+    print("Plant created:", end=" ")
+    rose.show()
 
-rose.set_height(25)
-rose.set_age(30)
-print("Current state:", end=" ")
-rose.show()
-#jasmin.show()
-#flow.show()
+    rose.set_height(25)
+    rose.set_age(30)
+    print("Current state:", end=" ")
+    rose.show()
+    #jasmin.show()
+    #flow.show()
